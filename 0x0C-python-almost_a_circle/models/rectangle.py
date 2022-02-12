@@ -99,3 +99,27 @@ class Rectangle(Base):
         returns area of rectangular object
         """
         return (self.height * self.width)
+
+    def display(self):
+        """
+        displays the shape using #'s
+        """
+        h = 0
+        w = 0
+        for h in range(self.__height):
+            for w in range(self.__width):
+                print("#", end='')
+                w += 1
+            print("\n")
+            h += 1
+
+
+if __name__ == "__main__":
+
+    r1 = Rectangle(4, 6)
+    r1.display()
+
+    print("---")
+
+    r1 = Rectangle(2, 2)
+    r1.display()
